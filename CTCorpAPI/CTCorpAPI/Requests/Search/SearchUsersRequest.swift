@@ -20,7 +20,7 @@ public class SearchUsersRequest: BaseRequest {
         var params = query.toParams()
         params["page"] = "\(page)"
         params["per_page"] = "\(pageSize)"
-        print(params)
+
         return request(method: .GET, path: path, pathParams: params) { (result) in
             completion(result)
         }
